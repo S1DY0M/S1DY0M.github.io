@@ -1,4 +1,4 @@
-## Midterm Project
+## Final Project
 Click these links to see cool stuff
 
 
