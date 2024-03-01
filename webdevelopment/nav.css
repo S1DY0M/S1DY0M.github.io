@@ -1,0 +1,43 @@
+/* nav.css */
+
+
+/* Apply styles specifically to the navigation bar */
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Style the list items (menu items) */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+
+/* Style the links */
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+
+/* Change background color on hover */
+
+nav a:hover {
+    background-color: #555;
+}
