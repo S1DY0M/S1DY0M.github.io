@@ -43,3 +43,8 @@ nav a {
 nav a:hover {
     background-color: #555;
 }
+
+nav .active a {
+    background-color: rgb(0, 0, 255);
+    /* Change background color for the active page */
+}
