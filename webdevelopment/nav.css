@@ -48,3 +48,18 @@ nav .active a {
     background-color: rgb(0, 0, 255);
     /* Change background color for the active page */
 }
+
+
+/* Add this rule to style the drop-down menu */
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #3498db;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+}
+
+nav ul li:hover>ul {
+    display: inherit;
+}
