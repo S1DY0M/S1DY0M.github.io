@@ -57,8 +57,12 @@ nav ul ul {
     background-color: #3498db;
     border: 2px solid #2980b9;
     border-radius: 5px;
+    left: 50%;
+    /* Center the dropdown horizontally */
+    transform: translateX(-50%);
+    /* Adjust for centering */
 }
 
 nav ul li:hover>ul {
-    display: inherit;
+    display: block;
 }
