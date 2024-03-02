@@ -4,7 +4,7 @@
 /* Apply styles specifically to the navigation bar */
 
 nav {
-    background-color: #333;
+    background-color: #000;
     padding: 10px;
     border-radius: 5px;
     text-align: right;
@@ -34,18 +34,22 @@ nav a {
     padding: 8px 12px;
     display: block;
     border-radius: 3px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
+    /* Change transition property to color */
 }
 
 
-/* Change background color on hover */
+/* Change font color on hover */
 
 nav a:hover {
     background-color: #555;
 }
 
+
+/* Change font color for active link */
+
 nav .active a {
-    background-color: rgb(0, 0, 255);
+    color: rgb(0, 0, 255);
 }
 
 
@@ -54,15 +58,15 @@ nav .active a {
 nav ul ul {
     display: none;
     position: absolute;
-    background-color: #3498db;
-    border: 2px solid #2980b9;
+    background-color: #000;
+    border: 2px solid rgb(0, 0, 255);
     border-radius: 5px;
     left: 50%;
-    /* Center the dropdown horizontally */
-    transform: translateX(-50%);
-    /* Adjust for centering */
+    transform: translateX(50%);
 }
 
 nav ul li:hover>ul {
     display: block;
+    background-color: #000;
+    flex-direction: column;
 }
