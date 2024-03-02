@@ -78,3 +78,30 @@ nav ul li:hover>ul {
     display: block;
     background-color: #000;
 }
+
+
+/* Media query for screens smaller than 600px (adjust the breakpoint as needed) */
+
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        /* Change the direction to stack items vertically */
+    }
+    nav li {
+        text-align: center;
+        /* Center-align list items */
+        margin: 0.5rem 0;
+        /* Add some spacing between items */
+    }
+    nav ul ul {
+        display: none;
+        /* Hide nested lists by default */
+        position: relative;
+        z-index: 999;
+        /* Ensure the dropdown appears above other elements */
+    }
+    nav li:hover>ul {
+        display: block;
+        /* Show the dropdown when parent li is hovered */
+    }
+}
