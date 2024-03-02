@@ -61,12 +61,20 @@ nav ul ul {
     background-color: #000;
     border: 2px solid rgb(0, 0, 255);
     border-radius: 5px;
-    left: 50%;
+    left: 81%;
     transform: translateX(50%);
+    flex-direction: column;
+}
+
+
+/* Adjust the styling for better spacing */
+
+nav ul ul li {
+    display: block;
+    /* Ensure each list item appears on a new line */
 }
 
 nav ul li:hover>ul {
     display: block;
     background-color: #000;
-    flex-direction: column;
 }
