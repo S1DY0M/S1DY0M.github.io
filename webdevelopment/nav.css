@@ -61,7 +61,7 @@ nav ul ul {
     background-color: #000;
     border: 2px solid rgb(0, 0, 255);
     border-radius: 5px;
-    left: 81%;
+    left: 67.5%;
     transform: translateX(50%);
     flex-direction: column;
 }
