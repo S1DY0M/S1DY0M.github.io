@@ -51,7 +51,7 @@ nav .active a {
 }
 
 
-/* Add this rule to style the drop-down menu */
+/* Dropdown styles */
 
 .dropdown-content {
     display: none;
@@ -72,7 +72,7 @@ nav .active a {
     color: #ffff;
     padding: 10px;
     text-decoration: none;
-    display: none;
+    display: block;
 }
 
 
@@ -85,9 +85,12 @@ nav .active a {
 
 /* Show the dropdown menu on hover */
 
-.dropdown:hover .dropdown-content {
+nav li:hover .dropdown-content {
     display: block;
 }
+
+
+/* Additional styles for navigation */
 
 nav a:hover {
     text-decoration: underline;
