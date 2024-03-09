@@ -1,6 +1,3 @@
-/* nav.css */
-
-
 /* Apply styles specifically to the navigation bar */
 
 nav {
@@ -8,6 +5,7 @@ nav {
     padding: 10px;
     border-radius: 5px;
     text-align: center;
+    color: white;
 }
 
 
@@ -46,7 +44,7 @@ nav a:hover {
 }
 
 
-/* Change font color for active link */
+/* Change font color for the active link */
 
 nav .active a {
     color: rgb(0, 0, 255);
@@ -70,15 +68,11 @@ nav .active a {
 
 /* Adjust the styling for better spacing */
 
-.dropdown-content {
-    display: block;
-}
-
 .dropdown-content a {
     color: #ffff;
     padding: 10px;
     text-decoration: none;
-    display: block;
+    display: none;
 }
 
 
@@ -93,4 +87,8 @@ nav .active a {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
