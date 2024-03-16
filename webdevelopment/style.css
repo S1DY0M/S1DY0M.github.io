@@ -29,3 +29,95 @@ h1 {
     margin: 10px 0;
     padding: 10px;
 }
+
+
+/* Resume container */
+
+.resume-container {
+    text-align: center;
+}
+
+
+/* Blockquote */
+
+blockquote {
+    text-align: center;
+    /* Center the text inside the blockquote */
+    margin: 0 auto;
+    /* Center the blockquote horizontally */
+}
+
+
+/* Paragraph container */
+
+.paragraph-container {
+    text-align: center;
+    margin: 0 auto;
+    /* Center the paragraph horizontally */
+}
+
+
+/* Heading 1 */
+
+.h1 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* Heading 2 */
+
+.h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    /* Center the text inside the footer */
+}
+
+
+/* Basic styles */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    /* Center align all text within the container */
+}
+
+h1,
+h2 {
+    text-align: center;
+    /* Center align heading 1 and heading 2 */
+}
+
+
+/* Container paragraph */
+
+.container p {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    /* Left align paragraph */
+}
+
+footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 18px;
+}
+
+
+/* Media query for mobile devices */
+
+@media only screen and (max-width: 768px) {
+    /* Adjust padding for container */
+    .container {
+        padding: 10px;
+    }
+}
