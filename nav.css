@@ -113,12 +113,12 @@ blockquote {
     /* Center the paragraph horizontally */
 }
 
-.about-h1 {
+.h1 {
     text-align: center;
     margin: 0 auto;
 }
 
-.about-h2 {
+.h2 {
     text-align: center;
     margin: 0 auto;
 }
