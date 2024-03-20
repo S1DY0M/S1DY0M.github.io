@@ -7,7 +7,7 @@ h1 {
 
 /* Apply styles to the first letter of the first paragraph */
 
-#reflection p:first-of-type::first-letter {
+#reflection p::first-letter {
     font-size: 1.5em;
     font-weight: bold;
     color: #3366cc;
@@ -17,7 +17,7 @@ h1 {
 
 /* Indent the first line of all other paragraphs after the first */
 
-#reflection p:not(:first-of-type) {
+#reflection p {
     text-indent: 2em;
     /* Adjust the indentation value as needed */
 }
