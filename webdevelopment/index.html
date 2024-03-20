@@ -1,4 +1,3 @@
-<!-- Index Page-->
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -22,6 +21,12 @@
 
     <!-- Navigation Bar -->
     <nav class="topnav">
+        <input id="toggle-menu" class="hamburger-menu" type="checkbox">
+        <label for="toggle-menu" class="hamburger-menu-icon">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
         <div id="myLinks">
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
@@ -30,13 +35,7 @@
                 <li><a href="reflection.html">Reflection</a></li>
             </ul>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-            <div class="hamburger-menu-icon">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
-        </a>
+        <!-- Close myLinks div -->
     </nav>
 
     <!-- Main Content -->
@@ -54,23 +53,6 @@
         <p>&copy; 2024 Austin Barr. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for hamburger menu toggle -->
-    <script>
-        // Function to toggle the menu
-        function toggleMenu() {
-            var menu = document.getElementById("myLinks");
-            var icon = document.querySelector(".icon");
-
-            // Toggle the visibility of the menu
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-                icon.classList.remove("active");
-            } else {
-                menu.style.display = "block";
-                icon.classList.add("active");
-            }
-        }
-    </script>
 
 </body>
 

@@ -97,26 +97,35 @@ nav a:hover {
 }
 
 
-/* Show hamburger menu on smaller screens */
-
-.hamburger-menu {
-    display: none;
-    /* Hide by default */
-}
-
-
 /* Media query for mobile devices */
 
 @media only screen and (max-width: 768px) {
-    /* Style the hamburger menu icon */
-    .topnav .icon {
+    /* Hide check box on big screen */
+    .hamburger-menu {
+        display: none;
+    }
+    /* Hide check box on big screen */
+    .hamburger-menu-icon {
+        display: none;
+    }
+    /* Hide links */
+    #myLinks {
+        display: none;
+    }
+    /* Hide check box */
+    .hamburger-menu {
+        position: absolute;
+        left: -9999px;
+    }
+    /* Show hamburger menu icon */
+    .hamburger-menu-icon {
         background: transparent;
         display: inline-block;
         padding: 10px;
         cursor: pointer;
     }
     /* Style the hamburger menu lines */
-    .topnav .icon .line {
+    .line {
         display: block;
         width: 30px;
         height: 3px;
@@ -124,38 +133,30 @@ nav a:hover {
         margin: 6px 0;
         transition: 0.4s;
     }
-    /* Rotate first and third lines to form an X */
-    .topnav .icon .line:first-child {
-        transform-origin: 0 0;
-    }
-    .topnav .icon .line:nth-child(2) {
-        transform-origin: 0 0;
-    }
-    .topnav .icon.active .line:first-child {
+    /* Rotate hamburger menu lines */
+    #toggle-menu:checked+.hamburger-menu-icon .line:nth-child(1) {
         transform: rotate(398.5deg);
         transform-origin: top left;
     }
-    .topnav .icon.active .line:nth-child(2) {
+    #toggle-menu:checked+.hamburger-menu-icon .line:nth-child(2) {
         opacity: 0;
     }
-    .topnav .icon.active .line:nth-child(3) {
+    #toggle-menu:checked+.hamburger-menu-icon .line:nth-child(3) {
         transform: rotate(-398.5deg);
         transform-origin: bottom left;
+    }
+    /* Show/hide navigation menu based on checkbox state */
+    #toggle-menu:checked~#myLinks {
+        display: block;
     }
 }
 
 
-/* Media query to hide hamburger menu on larger screens */
+/* Media query for larger devices */
 
 @media only screen and (min-width: 769px) {
+    /* Hide the checkbox */
     .hamburger-menu {
-        display: none;
-    }
-    nav ul {
-        display: block;
-    }
-    /* Hide icon on larger screens */
-    .icon {
         display: none;
     }
 }
