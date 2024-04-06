@@ -172,3 +172,15 @@ footer {
     transform: scale(2.0);
     /* Increase size by 100% on hover */
 }
+
+
+/* Footer background image */
+
+footer {
+    background-image: url('images/footer_bg.jpeg');
+    background-size: cover;
+    padding: 20px;
+    /* Optional: Add padding for better spacing */
+    color: white;
+    /* Optional: Set text color for better contrast */
+}
