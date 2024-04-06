@@ -1,129 +1,174 @@
-/* style.css */
+/* Define @font-face for custom fonts */
 
-h1 {
-    color: rgb(0, 0, 255);
+@font-face {
+    font-family: 'PTSerif-Regular';
+    src: url('/Users/austin_barr/Documents/IS_LT 4355(Web Dev)/Fonts/PT_Serif/PTSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PTSerif-Bold';
+    src: url('/Users/austin_barr/Documents/IS_LT 4355(Web Dev)/Fonts/PT_Serif/PTSerif-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'PTSerif-Italic';
+    src: url('//Users/austin_barr/Documents/IS_LT 4355(Web Dev)/Fonts/PT_Serif/PTSerif-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PTSerif-ItalicBold';
+    src: url('/Users/austin_barr/Documents/IS_LT 4355(Web Dev)/Fonts/PT_Serif/PTSerif-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }
 
 
-/* Apply styles to the first letter of the first paragraph */
+/* Default styles */
+
+body {
+    font-family: 'PTSerif-Regular', serif;
+    /* Use regular custom font as default */
+    color: rgb(0, 0, 0);
+    /* Default text color */
+    text-align: center;
+    /* Center align text within body */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    /* Center align headings */
+    margin: 10px;
+    /* Remove margin for headings */
+}
+
+p {
+    text-align: left;
+    /* Left align paragraphs */
+    margin: 10px;
+    /* Remove default margin for paragraphs */
+}
+
+
+/* Specific styles for elements */
+
+h1 {
+    color: rgb(0, 0, 255);
+    /* Blue color for h1 */
+}
 
 #reflection p::first-letter {
     font-size: 1.5em;
     font-weight: bold;
     color: #3366cc;
-    /* Change the color to your preference */
+    /* Blue color for first letter of first paragraph */
 }
 
-
-/* Indent the first line of all other paragraphs after the first */
-
-#reflection p {
+#reflection p:not(:first-of-type) {
     text-indent: 2em;
-    /* Adjust the indentation value as needed */
-}
-
-
-/* Apply the box model to reflection paragraphs */
-
-#reflection p {
+    /* Indent all paragraphs except the first */
     margin: 10px 0;
+    /* Margin for paragraphs */
     padding: 10px;
+    /* Padding for paragraphs */
 }
-
-
-/* Resume container */
 
 .resume-container {
     text-align: center;
+    /* Center align content within resume container */
 }
-
-
-/* Blockquote */
 
 blockquote {
     text-align: center;
-    /* Center the text inside the blockquote */
+    /* Center align text within blockquote */
     margin: 0 auto;
-    /* Center the blockquote horizontally */
+    /* Center blockquote horizontally */
 }
-
-
-/* Paragraph container */
-
-
-/* Center the paragraph horizontally */
-
-.paragraph-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
-
-
-/* Heading 1 */
-
-.h1 {
-    text-align: center;
-    margin: 0 auto;
-}
-
-
-/* Heading 2 */
-
-.h2 {
-    text-align: center;
-    margin: 0 auto;
-}
-
-
-/* Footer */
 
 footer {
     text-align: center;
-    /* Center the text inside the footer */
-}
-
-
-/* Basic styles */
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    /* Center align all text within the container */
-}
-
-h1,
-h2 {
-    text-align: center;
-    /* Center align heading 1 and heading 2 */
-}
-
-
-/* Container paragraph */
-
-.container p {
-    color: rgb(0, 0, 0);
-    text-align: left;
-    /* Left align paragraph */
-}
-
-footer {
+    /* Center align text within footer */
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f2f2f2;
+    /* Light gray background color for footer */
     padding: 18px;
+    /* Padding for footer */
+}
+
+.container {
+    max-width: 800px;
+    /* Maximum width for content container */
+    margin: 0 auto;
+    /* Center align container */
+    padding: 20px;
+    /* Padding for container */
 }
 
 
 /* Media query for mobile devices */
 
 @media only screen and (max-width: 768px) {
-    /* Adjust padding for container */
     .container {
         padding: 10px;
+        /* Adjusted padding for smaller screens */
     }
+}
+
+
+/* Print styles */
+
+@media print {
+    body {
+        color: black;
+        /* Set text color to black for printing */
+        font-family: serif;
+        /* Use serif font for printing */
+        margin: 1in;
+        /* Set printable margins to 1 inch on all sides */
+    }
+    h1,
+    p,
+    ul,
+    ol,
+    blockquote,
+    footer {
+        color: black;
+        /* Set text color to black for printing */
+        font-family: 'PTSerif-Regular', serif;
+        /* Use regular custom font for printing */
+        page-break-inside: avoid;
+        /* Avoid breaking elements across pages */
+    }
+}
+
+
+/* Define styles for footer icons */
+
+.footer-icon {
+    width: 15px;
+    /* Initial width */
+    height: 15px;
+    /* Initial height */
+    transition: transform 0.2s ease;
+    /* Smooth transition effect */
+}
+
+
+/* Hover effect for footer icons */
+
+.footer-icon:hover {
+    transform: scale(2.0);
+    /* Increase size by 100% on hover */
 }
