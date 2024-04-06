@@ -91,8 +91,12 @@ h1 {
 blockquote {
     text-align: center;
     /* Center align text within blockquote */
-    margin: 10 px auto;
-    /* Center blockquote horizontally */
+    margin: 20px auto;
+    /* Center blockquote horizontally with top and bottom margin of 20px */
+    max-width: 600px;
+    /* Limit maximum width of blockquote */
+    padding: 10px;
+    /* Add padding inside blockquote */
 }
 
 footer {
