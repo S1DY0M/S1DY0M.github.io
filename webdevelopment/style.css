@@ -91,7 +91,7 @@ h1 {
 blockquote {
     text-align: center;
     /* Center align text within blockquote */
-    margin: 0 auto;
+    margin: 10 px auto;
     /* Center blockquote horizontally */
 }
 
@@ -183,4 +183,11 @@ footer {
     /* Optional: Add padding for better spacing */
     color: white;
     /* Optional: Set text color for better contrast */
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 10 px;
+    /* 16:9 aspect ratio (height / width * 100%) */
+    overflow: hidden;
 }
