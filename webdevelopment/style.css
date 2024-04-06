@@ -2,24 +2,24 @@
 
 @font-face {
     font-family: 'PTSerif-Regular';
-    src: url('/Users/austin_barr/Documents/IS_LT 4355(Web Dev)/Fonts/PT_Serif/PTSerif-Regular.ttf') format('truetype');
+    src: url('/PT_Serif/PTSerif-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'PTSerif-Bold';
-    src: url('/Users/austin_barr/Documents/IS_LT 4355(Web Dev)/Fonts/PT_Serif/PTSerif-Bold.ttf') format('truetype');
+    src: url('/PT_Serif/PTSerif-Bold.ttf') format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'PTSerif-Italic';
-    src: url('//Users/austin_barr/Documents/IS_LT 4355(Web Dev)/Fonts/PT_Serif/PTSerif-Italic.ttf') format('truetype');
+    src: url('/PT_Serif/PTSerif-Italic.ttf') format('truetype');
     font-style: italic;
 }
 
 @font-face {
     font-family: 'PTSerif-ItalicBold';
-    src: url('/Users/austin_barr/Documents/IS_LT 4355(Web Dev)/Fonts/PT_Serif/PTSerif-BoldItalic.ttf') format('truetype');
+    src: url('/PT_Serif/PTSerif-BoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
