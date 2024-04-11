@@ -29,15 +29,10 @@
 
 body {
     font-family: 'PTSerif-Regular', serif;
-    /* Use regular custom font as default */
     color: rgb(0, 0, 0);
-    /* Default text color */
     text-align: center;
-    /* Center align text within body */
     margin: 0;
-    /* Remove default margin */
     padding: 0;
-    /* Remove default padding */
 }
 
 h1,
@@ -47,16 +42,12 @@ h4,
 h5,
 h6 {
     text-align: center;
-    /* Center align headings */
     margin: 10px;
-    /* Remove margin for headings */
 }
 
 p {
     text-align: left;
-    /* Left align paragraphs */
     margin: 10px;
-    /* Remove default margin for paragraphs */
 }
 
 
@@ -64,60 +55,49 @@ p {
 
 h1 {
     color: rgb(0, 0, 255);
-    /* Blue color for h1 */
 }
 
 #reflection p::first-letter {
     font-size: 1.5em;
     font-weight: bold;
     color: #3366cc;
-    /* Blue color for first letter of first paragraph */
 }
 
 #reflection p:not(:first-of-type) {
     text-indent: 2em;
-    /* Indent all paragraphs except the first */
     margin: 10px 0;
-    /* Margin for paragraphs */
     padding: 10px;
-    /* Padding for paragraphs */
 }
 
-.resume-container {
+.resume-container,
+blockquote,
+footer {
     text-align: center;
-    /* Center align content within resume container */
 }
 
 blockquote {
-    text-align: center;
-    /* Center align text within blockquote */
-    margin: 20px auto;
-    /* Center blockquote horizontally with top and bottom margin of 20px */
+    margin: 10px auto;
     max-width: 600px;
-    /* Limit maximum width of blockquote */
     padding: 10px;
-    /* Add padding inside blockquote */
 }
 
 footer {
-    text-align: center;
-    /* Center align text within footer */
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f2f2f2;
-    /* Light gray background color for footer */
     padding: 18px;
-    /* Padding for footer */
+    background-image: url('images/footer_bg.jpeg');
+    background-size: cover;
+    color: white;
+    margin: 10px;
 }
 
 .container {
     max-width: 800px;
-    /* Maximum width for content container */
     margin: 0 auto;
-    /* Center align container */
-    padding: 20px;
-    /* Padding for container */
+    padding: 10px;
+    text-indent: 2em;
 }
 
 
@@ -126,7 +106,6 @@ footer {
 @media only screen and (max-width: 768px) {
     .container {
         padding: 10px;
-        /* Adjusted padding for smaller screens */
     }
 }
 
@@ -136,11 +115,8 @@ footer {
 @media print {
     body {
         color: black;
-        /* Set text color to black for printing */
         font-family: serif;
-        /* Use serif font for printing */
         margin: 1in;
-        /* Set printable margins to 1 inch on all sides */
     }
     h1,
     p,
@@ -149,11 +125,8 @@ footer {
     blockquote,
     footer {
         color: black;
-        /* Set text color to black for printing */
         font-family: 'PTSerif-Regular', serif;
-        /* Use regular custom font for printing */
         page-break-inside: avoid;
-        /* Avoid breaking elements across pages */
     }
 }
 
@@ -162,11 +135,8 @@ footer {
 
 .footer-icon {
     width: 15px;
-    /* Initial width */
     height: 15px;
-    /* Initial height */
     transition: transform 0.2s ease;
-    /* Smooth transition effect */
 }
 
 
@@ -174,24 +144,68 @@ footer {
 
 .footer-icon:hover {
     transform: scale(2.0);
-    /* Increase size by 100% on hover */
-}
-
-
-/* Footer background image */
-
-footer {
-    background-image: url('images/footer_bg.jpeg');
-    background-size: cover;
-    padding: 20px;
-    /* Optional: Add padding for better spacing */
-    color: white;
-    /* Optional: Set text color for better contrast */
 }
 
 .video-container {
     position: relative;
-    padding-bottom: 10 px;
-    /* 16:9 aspect ratio (height / width * 100%) */
+    padding-bottom: 2%;
+    /* 16:9 aspect ratio */
     overflow: hidden;
+}
+
+
+/* Apply styles to the profile picture */
+
+.profile_pic {
+    max-width: 90%;
+    /* Limit the maximum width of the image */
+    height: auto;
+    /* Maintain aspect ratio */
+    width: auto;
+}
+
+
+/* Responsive adjustments using media queries */
+
+@media (max-width: 768px) {
+    /* Adjust image size for smaller screens */
+    .profile_pic {
+        max-width: 80%;
+        /* Reduce image width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for extra small screens */
+    .profile_pic {
+        max-width: 100%;
+        /* Allow image to occupy full width on very small screens */
+    }
+}
+
+.project-image {
+    max-width: 90%;
+    /* Limit the maximum width of the image */
+    height: auto;
+    /* Maintain aspect ratio */
+    width: auto;
+}
+
+
+/* Responsive adjustments using media queries */
+
+@media (max-width: 768px) {
+    /* Adjust image size for smaller screens */
+    .project-image {
+        max-width: 80%;
+        /* Reduce image width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for extra small screens */
+    .project-image {
+        max-width: 100%;
+        /* Allow image to occupy full width on very small screens */
+    }
 }
