@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!--
+    Title: Contact Page
+    Use: Contact form for website visitors to reach out
+    Author: Austin Barr
+    School/Term: University of Missouri/Spring 2024
+    Developed: 3/28/2024
+    Tested: 4/5/2024
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Austin Barr</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <input type="hidden" name="websiteType" value="portfolio">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="topnav">
+        <input id="toggle-menu" class="hamburger-menu" type="checkbox">
+        <label for="toggle-menu" class="hamburger-menu-icon">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+        <div id="myLinks">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Contact Austin Barr</h1>
+        <h4>Got questions or feedback? Fill out the form below to get in touch!</h4>
+
+        <form id="contactForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="firstName">First Name <span>*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name <span>*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message <span>*</span></label>
+                <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><span><img src="images/phone_icon.png" alt="Phone Icon" class="footer-icon"></span> 1(888)888-8888 | Austin Barr | <span><img src="images/email_icon.jpeg" alt="Email Icon" class="footer-icon"></span> abbgr2@umsystem.edu </p>
+        <p>&copy; 2024 Austin Barr. All rights reserved.</p>
+    </footer>
+
+    <a href="#top" class="back-to-top-btn">Back to Top</a>
+
+</body>
+
+</html>

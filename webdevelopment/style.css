@@ -242,3 +242,72 @@ footer {
         /* Allow image to occupy full width on very small screens */
     }
 }
+
+
+/* Main content section */
+
+.main-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Form styles */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    /* Allow vertical resizing of textarea */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: 2px solid #0000ff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #0000ff;
+}
+
+
+/* Responsive design */
+
+@media (max-width: 600px) {
+    .main-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for extra small screens */
+    .main-content {
+        max-width: 100%;
+        /* Allow image to occupy full width on very small screens */
+    }
+}
