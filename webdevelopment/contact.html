@@ -2,22 +2,15 @@
 <html lang="en-US">
 
 <head>
-    <!--
-    Title: Contact Page
-    Use: Contact form for website visitors to reach out
-    Author: Austin Barr
-    School/Term: University of Missouri/Spring 2024
-    Developed: 3/28/2024
-    Tested: 4/5/2024
-    -->
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title and Stylesheets -->
     <title>Contact Austin Barr</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <input type="hidden" name="websiteType" value="portfolio">
-
 </head>
 
 <body>
@@ -47,6 +40,9 @@
         <h4>Got questions or feedback? Fill out the form below to get in touch!</h4>
 
         <form id="contactForm" action="process_contact_form.php" method="POST">
+            <!-- Hidden input for websiteType -->
+            <input type="hidden" name="websiteType" value="portfolio">
+
             <div class="form-group">
                 <label for="firstName">First Name <span>*</span></label>
                 <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
