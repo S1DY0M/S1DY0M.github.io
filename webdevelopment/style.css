@@ -32,7 +32,7 @@ body {
     color: rgb(0, 0, 0);
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 h1,
@@ -309,5 +309,43 @@ button[type="submit"]:hover {
     .main-content {
         max-width: 100%;
         /* Allow image to occupy full width on very small screens */
+    }
+}
+
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
     }
 }
