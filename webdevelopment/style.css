@@ -194,13 +194,12 @@ footer {
     /* Limit the maximum width of the image */
     height: auto;
     /* Maintain aspect ratio */
-    width: auto;
 }
 
 
 /* Responsive adjustments using media queries */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     /* Adjust image size for smaller screens */
     .profile_pic {
         max-width: 80%;
@@ -208,7 +207,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     /* Further adjustments for extra small screens */
     .profile_pic {
         max-width: 100%;

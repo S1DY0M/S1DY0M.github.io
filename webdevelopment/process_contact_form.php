@@ -1,35 +1,36 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize form inputs
-    $firstName = htmlspecialchars($_POST["firstName"]);
-    $lastName = htmlspecialchars($_POST["lastName"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $message = htmlspecialchars($_POST["message"]);
+// Check if the request method is POST
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Retrieve and sanitize form inputs
+    $firstName = isset($_POST["firstName"]) ? htmlspecialchars($_POST["firstName"]) : "";
+    $lastName = isset($_POST["lastName"]) ? htmlspecialchars($_POST["lastName"]) : "";
+    $email = isset($_POST["email"]) ? filter_var($_POST["email"], FILTER_SANITIZE_EMAIL) : "";
+    $message = isset($_POST["message"]) ? htmlspecialchars($_POST["message"]) : "";
 
-    // Validate email
+    // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         http_response_code(400); // Bad request
-        echo "Invalid email format. Please enter a valid email address.";
-        exit;
+        exit("Invalid email format. Please enter a valid email address.");
     }
 
-    // Determine subject line based on website type
+    // Determine the subject line based on the website type (if provided)
     $websiteType = isset($_POST["websiteType"]) ? $_POST["websiteType"] : "";
     $subject = ($websiteType === "portfolio") ?
         "Portfolio/Professional Website Contact" : "Educational Website Contact";
 
-    // Email content
+    // Prepare email headers
     $to = "abbgr2@umsystem.edu"; // Change to your email address
-    $subject = '=?UTF-8?B?' . base64_encode($subject) . '?='; // Subject with UTF-8 encoding
+    $subjectEncoded = '=?UTF-8?B?' . base64_encode($subject) . '?';
     $headers = "From: $email\r\nReply-To: $email\r\nContent-type: text/plain; charset=UTF-8";
 
+    // Prepare email body
     $body = "First Name: $firstName\n";
     $body .= "Last Name: $lastName\n";
     $body .= "Email: $email\n";
     $body .= "Message:\n$message\n";
 
     // Send email
-    if (mail($to, $subject, $body, $headers)) {
+    if (mail($to, $subjectEncoded, $body, $headers)) {
         http_response_code(200); // Success
         echo "Thank you for your message. We will contact you soon!";
     } else {
@@ -41,4 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Method Not Allowed";
 }
 ?>
+
+
 
