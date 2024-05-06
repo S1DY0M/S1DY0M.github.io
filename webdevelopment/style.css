@@ -190,7 +190,7 @@ footer {
 /* Apply styles to the profile picture */
 
 .profile_pic {
-    max-width: 90%;
+    max-width: 50%;
     /* Limit the maximum width of the image */
     height: auto;
     /* Maintain aspect ratio */
