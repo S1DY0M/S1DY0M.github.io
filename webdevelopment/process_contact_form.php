@@ -1,4 +1,4 @@
-<?php
+/* <?php
 // Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Retrieve and sanitize form inputs
@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "Method Not Allowed";
 }
 ?>
+*/
 
 
 
